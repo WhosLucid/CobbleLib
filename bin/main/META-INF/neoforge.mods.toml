@@ -1,0 +1,49 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="${mod_authors}"
+description='''
+CobbleLib - A server-side utility library for Cobblemon on NeoForge by WhosLucid.
+Provides Cobbletokens virtual economy, permissions, UI menus, Pokemon utilities, and configuration APIs.
+Used as a dependency by CobbleLab, CobbleQuiz, and other Cobblemon mods.
+'''
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="SERVER"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="SERVER"
+
+[[dependencies.${mod_id}]]
+    modId="cobblemon"
+    type="required"
+    versionRange="[1.7.0,)"
+    ordering="AFTER"
+    side="SERVER"
+
+[[dependencies.${mod_id}]]
+    modId="gooeylibs"
+    type="optional"
+    versionRange="[3.0.0,)"
+    ordering="AFTER"
+    side="SERVER"
+
+[[dependencies.${mod_id}]]
+    modId="ftbranks"
+    type="optional"
+    versionRange="[2101.1.0,)"
+    ordering="AFTER"
+    side="SERVER"
